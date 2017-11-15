@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Contador Férias</title>
+		<script   src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  			crossorigin="anonymous"></script>
+		<script src="jquery.countdown-2.2.0/jquery.countdown.min.js"></script>
+	</head>
+	<style type="text/css">
+		body {
+			background: url("programador.jpg") no-repeat center center fixed;
+			background-size: cover;
+		}	
+		.contador {
+			background: white;
+			font-size: 25px;
+			text-align: center;
+		}
+	</style>
+
+	<body>
+
+		<div class="contador" data-countdown="2017/12/11"></div>
+
+		<script type="text/javascript">
+			$('[data-countdown]').each(function() {
+			  var $this = $(this), finalDate = $(this).data('countdown');
+			  $this.countdown(finalDate, function(event) {
+			    $this.html(event.strftime('<b>Matheus: Você tem %D dias %H horas %M minutos e %S segundos para arranjar um emprego</b>'));
+			  });
+			});
+		</script>
+
+	</body>
+</html>
